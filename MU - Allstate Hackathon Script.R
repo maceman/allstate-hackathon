@@ -1,4 +1,4 @@
-# Author: Mike Macey
+# Author: Mike Macey and Cody Philips
 
 # Set working directory
 setwd("/Users/maceyma/Desktop/Allstate Hackathon/Data")
