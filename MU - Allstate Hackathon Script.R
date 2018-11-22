@@ -254,5 +254,4 @@ data_all_merged$last_event = as.factor(data_all_merged$last_event)
 bag.model = randomForest(last_event~ . - id, data=data_all_merged,mtry=8,importance=TRUE)
 yhatbag = predict(bag.model,newdata=data_test_all,type="prob")
 
-
 #[1] 0.6737617
