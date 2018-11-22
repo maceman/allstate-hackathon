@@ -62,8 +62,6 @@ data_all_merged <- merge(data_ohe, data_all_last_element, by=c("id"))
 
 ##created entire dataset in correect format above ^
 
-
-
 # create dummy counter variable
 data_all[, dummy_counter:=1]
 
@@ -176,7 +174,6 @@ y = data_all_merged$last_event
 yTrain = data_train_merged$last_event
 grid = 10^seq(10,-2,length=100)
 
-
 data_train_all <- subset(data_all_merged, !(id %in% ids_test$id))
 data_test_all <- subset(data_all_merged, id %in% ids_test$id)
 
@@ -186,8 +183,6 @@ plot(cv.out)
 bestlam = cv.out$lambda.min
 bestlam
 ridge.predBest = predict(ridge.mod,s=bestlam,type="response",newx=Xtest)
-
-
 
 ## manipulate for ridge regression
 
@@ -223,7 +218,7 @@ ridgemodelfinal = predictions_raw
 write.csv(ridgemodelfinal, file="/Users/maceyma/Desktop/Allstate Hackathon/Data/secondtry.csv", quote=TRUE, row.names=FALSE)
 write.csv(data_test_ohe, file="/Users/maceyma/Desktop/Allstate Hackathon/Data/jmp_test.csv", quote=TRUE, row.names=FALSE)
 
-## neural network now
+## neural network
 
 library(nnet)
 
