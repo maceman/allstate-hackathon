@@ -1,3 +1,5 @@
+# Author: Mike Macey
+
 # Set working directory
 setwd("/Users/maceyma/Desktop/Allstate Hackathon/Data")
 
